@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuristic Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="game-header">
+            <h1 class="game-title">
+                <span class="title-text">TIC TAC TOE</span>
+                
+            </h1>
+        </header>
+
+        <!-- Game Mode Selection -->
+        <div class="mode-selection" id="modeSelection">
+            <h2 class="mode-title">SELECT GAME MODE</h2>
+            <div class="mode-buttons">
+                <button class="mode-btn" id="pvpMode" data-mode="pvp">
+                    <span class="mode-icon">👥</span>
+                    <span class="mode-text">PLAYER VS PLAYER</span>
+                </button>
+                <button class="mode-btn" id="pvcMode" data-mode="pvc">
+                    <span class="mode-icon">🤖</span>
+                    <span class="mode-text">PLAYER VS COMPUTER</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Game Board -->
+        <div class="game-container" id="gameContainer" style="display: none;">
+            <div class="game-info">
+                <div class="player-indicator">
+                    <span class="current-player-label">CURRENT PLAYER:</span>
+                    <span class="current-player" id="currentPlayer">X</span>
+                </div>
+                <div class="game-mode-display">
+                    <span class="mode-label">MODE:</span>
+                    <span class="mode-text-display" id="currentMode">PLAYER VS PLAYER</span>
+                </div>
+            </div>
+
+            <div class="game-board" id="gameBoard">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+
+            <div class="game-controls">
+                <button class="control-btn reset-btn" id="resetBtn">RESET GAME</button>
+                <button class="control-btn mode-btn-small" id="changeModeBtn">CHANGE MODE</button>
+            </div>
+        </div>
+
+        <!-- Game Result Modal -->
+        <div class="modal-overlay" id="modalOverlay" style="display: none;">
+            <div class="result-modal">
+                <div class="result-content">
+                    <h2 class="result-title" id="resultTitle">GAME OVER</h2>
+                    <p class="result-message" id="resultMessage">Player X Wins!</p>
+                    <div class="result-buttons">
+                        <button class="result-btn play-again-btn" id="playAgainBtn">PLAY AGAIN</button>
+                        <button class="result-btn change-mode-btn" id="changeModeBtnModal">CHANGE MODE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
